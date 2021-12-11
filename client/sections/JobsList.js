@@ -1,8 +1,11 @@
+import React,{useState} from 'react'
 import {JobCard} from '../components'
 
 
 
-const JobsList = ({jobs}) => {
+const JobsList = ({jobs,carousel}) => {
+
+
     return (
         <div className='jobList'>
             {jobs.map((job)=>

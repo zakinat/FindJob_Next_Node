@@ -1,7 +1,7 @@
 .jobList{
     //mixin for flex and justify and aligne
     @include flex-jst_dC-al_dC();
-
+    position: relative;
     flex-wrap: wrap;
     margin-top: 5rem;
 
@@ -69,3 +69,5 @@
                 }
         }
 }
+
+

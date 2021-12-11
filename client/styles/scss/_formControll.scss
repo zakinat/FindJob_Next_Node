@@ -1,0 +1,12 @@
+.formControl{
+    @include flex-jst_dC-al_dC($jst:space-between);
+    width: 100%;
+   span{
+       .svg__animation{
+        transition:  0.15s ease;
+       }
+       .svg__animation:hover{
+           transform: scale(1.2);
+       }
+   }
+}

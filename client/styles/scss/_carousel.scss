@@ -1,0 +1,21 @@
+.carousel{
+
+width: 100%;
+position: relative;
+    &__content{
+        @include flex-jst_dC-al_dC();
+    }
+    margin-top: 10rem;
+}
+
+
+.leftArrow{
+    position: absolute;
+    top: 35%;
+    left: -100px;
+}
+.rightArrow{
+    position: absolute;
+    top: 35%;
+    right: -100px;
+}

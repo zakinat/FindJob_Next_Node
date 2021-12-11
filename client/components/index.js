@@ -1,3 +1,4 @@
 import JobCard from './JobCard'
-
-export {JobCard}
+import Modal from './Modal'
+import FormDateJob from './FormDateJob'
+export {JobCard, Modal,FormDateJob}

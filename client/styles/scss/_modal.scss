@@ -1,0 +1,87 @@
+.modalContainer {
+    position: absolute;
+    top: 115%;
+    left: 0;
+    
+    background-color: #fff;
+    @include flex-jst_dC-al_dC();
+  
+    .modal {
+      width: 25vw;
+      min-width: 250px;
+      height: auto;
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 20px;
+      z-index: 5;
+      box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  
+      &_header {
+        position: relative;
+        @include flex-jst_dC-al_dC($jst:space-between);
+        border-bottom: 1px solid #dddddd;
+        &-title {
+          text-align: left;
+
+          
+        }
+        .close__svg{
+            cursor: pointer;
+        }
+        
+      }
+  
+      &_content {
+        border-bottom: 1px solid #dddddd;
+        padding: 2rem 0;
+      }
+  
+      &_footer {
+        @include flex-jst_dC-al_dC($jst:space-between);
+       
+
+  
+        button {
+          
+          padding: 0.5rem;
+  
+          border-radius: 8px;
+          cursor: pointer;
+        }
+        .modal-close {
+          background-color: transparent;
+          font-weight: 600;
+          color:rgba(54, 67, 72, 0.8) ;
+          
+  
+          &:hover {
+            color: rgba(54, 67, 72, 0.8);
+          }
+        }
+        .submit {
+          margin-right: 1rem;
+          background-color: #364348;
+          color: #fff;
+  
+          &:hover {
+            background-color: rgba(54, 67, 72, 0.8);
+          }
+        }
+      }
+    }
+    .modal:before{
+        content: "";
+        position: absolute;
+        left: 27px;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        top: -10px;
+        border-bottom: 10px solid #fff;
+        z-index: 2;
+    }
+  }
+
+
+  .control__wrap{
+      position: relative;
+  }
