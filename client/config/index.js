@@ -1,3 +1,10 @@
-const dev = process.env.NODE_ENV !== 'production'
+ const BaseUrl=`https://www.zippia.com/api`
+ 
+ const config = {
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  }
 
-export const server =  `https://www.zippia.com/api/jobs/`
+
+  export {BaseUrl,config}
