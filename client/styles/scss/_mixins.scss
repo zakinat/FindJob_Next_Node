@@ -1,0 +1,5 @@
+@mixin flex-jst_dC-al_dC($jst:center,$al:center) {
+    display: flex;
+    justify-content: $jst;
+    align-items: $al;
+  }

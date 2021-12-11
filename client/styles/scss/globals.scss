@@ -1,0 +1,33 @@
+@import 'utility';
+@import 'mixins';
+@import 'nav';
+@import 'jobList';
+@import 'homePage';
+@import 'jobsPage';
+
+
+
+
+html,
+body,
+*,
+*:after,
+*:before {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+ul, li{
+  list-style-type: none;
+  text-decoration: none;
+}

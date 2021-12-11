@@ -1,5 +1,5 @@
- const BaseUrl=`https://www.zippia.com/api`
- 
+ const BaseUrl=process.env.API_BASE_URL
+
  const config = {
     headers: {
       'Content-Type': 'application/json'

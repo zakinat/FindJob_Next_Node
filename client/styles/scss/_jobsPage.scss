@@ -1,0 +1,20 @@
+.jobsPage{
+    @include flex-jst_dC-al_dC();
+    flex-direction: column;
+
+    button{
+        padding: 1rem;
+        background-color: #0B7ACD;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        transition:  0.2s ease;
+        margin-top: 2rem;
+        
+    }
+    button:hover{
+        transform: scale(1.05);
+        
+    }
+}

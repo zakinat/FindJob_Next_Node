@@ -1,0 +1,16 @@
+.homePage{
+    @include flex-jst_dC-al_dC();
+    flex-direction: column;
+    width: 100%;
+
+        h1{
+            color: #53377A;
+            margin: 5rem 0 3rem 0;
+            font-size: 3rem;
+        }
+
+        p{
+            margin-top: 1rem;
+            font-size: 1.3rem;
+        }
+}

@@ -1,12 +1,16 @@
-import {JObCard} from '../components'
-import { JobCard } from '../components/JobCard'
+import {JobCard} from '../components'
+
 
 
 const JobsList = ({jobs}) => {
     return (
-        <div>
-            {jobs.map((job,index)=>
-                <JobCard title={job.jobTitle} company={job.companyName} desc={job.shortDesc} key={job.jobId}/>)}
+        <div className='jobList'>
+            {jobs.map((job)=>
+                <JobCard 
+                    title={job.jobTitle} company={job.companyName}
+                    desc={job.shortDesc} estSalary={job.estimatedSalary}
+                    location={job.location} postedDate={job.OBJpostingDate}
+                    key={job.jobId}/>)}
         </div>
     )
 }

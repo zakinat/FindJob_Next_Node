@@ -1,0 +1,22 @@
+.navbar{
+    background-color: #293133;
+    &__links{
+        padding: 1rem;
+
+            ul{
+                @include flex-jst_dC-al_dC($jst:flex-start,$al:flex-start);
+
+                li{
+                    margin-right: 1.5rem;
+                    font-size: 1.5rem;
+                    
+                    color: #DBD7D2;
+                    transition: color 0.15s ease;
+                }
+                li:hover{
+                    color: #F8F8FF;
+                }
+            }
+    }
+
+}
