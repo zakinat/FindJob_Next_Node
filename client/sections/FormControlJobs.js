@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState} from 'react'
 import {AutoComplete} from '../components'
 
 import {MdOutlineViewCarousel} from "react-icons/md"

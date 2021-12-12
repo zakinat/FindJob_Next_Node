@@ -1,6 +1,6 @@
 import Nav from './Nav'
 import Meta from './Meta'
-
+import React from 'react'
 
 
 const Layout = ({ children }) => {
