@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState} from react
 
 const AutoComplete = ({ suggestions ,setWatchNameComp,watchNameComp}) => {
 
@@ -12,7 +12,7 @@ const AutoComplete = ({ suggestions ,setWatchNameComp,watchNameComp}) => {
   const onChange = (e) => {
     const userInput = e.target.value;
 
-    // Filter our suggestions that don't contain the user's input
+    // Filter our suggestions that dont contain the users input
     const unLinked = suggestions.filter(
       (suggestion) =>
         suggestion.toLowerCase().indexOf(userInput.toLowerCase()) > -1
@@ -54,7 +54,7 @@ const AutoComplete = ({ suggestions ,setWatchNameComp,watchNameComp}) => {
       </ul>
     ) : (
       <div className="no-suggestions">
-        <em>No suggestions, you're on your own!</em>
+        <em>No suggestions, youre on your own!</em>
       </div>
     );
   };
