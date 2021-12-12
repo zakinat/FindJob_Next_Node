@@ -1,6 +1,38 @@
 .formControl{
     @include flex-jst_dC-al_dC($jst:space-between);
     width: 100%;
+    margin-top: 5rem;
+
+    &__filter{
+        @include flex-jst_dC-al_dC();
+        
+        
+        &-namecompany{
+            @include flex-jst_dC-al_dC($jst:space-between);
+            margin-left: 1rem;
+            width: 250px;
+            border: 1px solid grey;
+            &-input{
+                
+                height: 48px;
+                width: 100%;
+                outline: none;
+                border: none;
+                position: relative;
+                    input{
+                        
+                        height: 100%;
+                        width: 100%;
+                        outline: none;
+                        border: none;
+                    }
+
+            }
+            button{
+                margin-left: 1rem;
+            }
+        }
+    }
    span{
        .svg__animation{
         transition:  0.15s ease;
