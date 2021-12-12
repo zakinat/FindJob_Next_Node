@@ -135,7 +135,7 @@ const index = ({jobs}) => {
 
 export default index
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     const req_payload={
         "companySkills": true,
         "dismissedListingHashes": [],
