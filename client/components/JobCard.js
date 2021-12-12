@@ -1,3 +1,4 @@
+import React from 'react'
 import moment from 'moment'
  const JobCard = ({title, company, desc, estSalary, location, postedDate}) => {
     return (
