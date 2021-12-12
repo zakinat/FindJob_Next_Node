@@ -1,9 +1,5 @@
 import { useState } from "react";
 
-
-
-
-
 const AutoComplete = ({ suggestions ,setWatchNameComp,watchNameComp}) => {
 
 
@@ -39,7 +35,7 @@ const AutoComplete = ({ suggestions ,setWatchNameComp,watchNameComp}) => {
     setWatchNameComp(e.target.innerText)
     
   };
-
+//building suggestion list comp
   const SuggestionsListComponent = () => {
     return filteredSuggestions.length ? (
       <ul className="suggestions">

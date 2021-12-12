@@ -4,22 +4,25 @@ import {getJobs} from '../../api/getJobs'
 import {JobsList,FormControlJobs,Carousel} from '../../../sections'
 const cardsPerLoad=10
 let holdingArr=[]
-let suggestions=[]
 
 const index = ({jobs}) => {
   //collect companies' name for auto complete suggestion
     const [suggestions,setSuggestions]=useState(jobs.map((job)=>job.companyName.toLowerCase()))
-    //do we have a name of company to filter by
+    //do we have a name of company to filter by?
     const [nameCompany, setNameCompany]=useState(null)
     //satate of filtering data by name of company
     const [filterByNameComp,setFilterByNameComp]=useState(false)
+    //data filtered by the namae of company
     const [dataFilteredByNameComp,setDataFilteredByNameComp]=useState([])
+
     //state to control when data filtered 
     const [filteredJobs,setFilteredJobs]=useState(jobs)
 
     //state to manage when the user asks to fliter by date
     const [jobDateFilter,setJobDateFilter] =useState(false)
+    //data filtered by date
     const [dataFilteredByDate,setDataFilteredByDate]=useState([])
+
     //state to manage when to show cards in carousil
     const [carousel,setCarousel] =useState(false)
     //state to manage wich cards to show in page by deefault 10 per every load
@@ -27,7 +30,7 @@ const index = ({jobs}) => {
     //state to manage button load another 10 cards
     const [next,setNext]=useState(0)
 
-    //helper function to slice fron data to show in page
+    //helper function to slice from data to show in page
     const sliceArr=(start,end)=>{
       const slicedJobs= filteredJobs.slice(start,end)
       holdingArr=[...holdingArr,...slicedJobs]
@@ -48,10 +51,14 @@ const index = ({jobs}) => {
         }
         
       }, [])
+
 //generate filtered data substracting from all filters
     useEffect(() => {
       if(jobDateFilter && filterByNameComp){
-        const subArr=dataFilteredByDate.filter(n => !dataFilteredByNameComp.includes(n))
+        const idsJobsByName=dataFilteredByNameComp.map((job)=>job.jobId)
+        const idsJobsByDate=dataFilteredByDate.map((job)=>job.jobId)
+        const subIds=idsJobsByDate.filter(id => idsJobsByName.includes(id))
+        const subArr=filteredJobs.filter(job => subIds.includes(job.jobId) )
         setFilteredJobs(subArr)
       } else if (jobDateFilter){
         setFilteredJobs(dataFilteredByDate)

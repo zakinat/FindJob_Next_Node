@@ -12,19 +12,18 @@ const [hoverLeft,setHoverLeft] =useState(false)
 
 const length=jobs.length
 
-const nextFeedbacks=()=>{
-    setCurrent( current===length-1?0:current+2)
+const nextSlide=()=>{
+    setCurrent( current===length-1?0:current+1)
 }
 
-const prevtFeedbacks=()=>{
-    setCurrent( current===0?length-1:current-2)
+const prevSlide=()=>{
+    setCurrent( current===0?length-1:current-1)
 }
 
 
 
     return (
         <div className='carousel'>
-               
                 <div className='carousel__content'>
                                 {
                                 jobs.map((job,index)=>{
@@ -44,8 +43,8 @@ const prevtFeedbacks=()=>{
                         })
                     }
                 </div>
-                <IoIosArrowDropleftCircle className='leftArrow' color={hoverLeft?'#0B7ACD':"#97CBF1"} size={60} onClick={prevtFeedbacks} onMouseEnter={()=>setHoverLeft(true)} onMouseLeave={()=>setHoverLeft(false)}/>
-                <IoIosArrowDroprightCircle className='rightArrow' color={hoverRight?'#0B7ACD':"#97CBF1"} size={60} onClick={nextFeedbacks} onMouseEnter={()=>setHoverRight(true)} onMouseLeave={()=>setHoverRight(false)}/>
+                <IoIosArrowDropleftCircle className='leftArrow' color={hoverLeft?'#0B7ACD':"#97CBF1"} size={60} onClick={prevSlide} onMouseEnter={()=>setHoverLeft(true)} onMouseLeave={()=>setHoverLeft(false)}/>
+                <IoIosArrowDroprightCircle className='rightArrow' color={hoverRight?'#0B7ACD':"#97CBF1"} size={60} onClick={nextSlide} onMouseEnter={()=>setHoverRight(true)} onMouseLeave={()=>setHoverRight(false)}/>
         </div>
     )
 }

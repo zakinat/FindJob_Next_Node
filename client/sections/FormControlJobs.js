@@ -5,6 +5,7 @@ import {MdOutlineViewCarousel} from "react-icons/md"
 import {BsFillGrid3X3GapFill,BsSearch} from "react-icons/bs"
 const FormControlJobs = ({jobDateFilter,setJobDateFilter,carousel,setCarousel,suggestions,setNameCompany,filterByNameComp,setFilterByNameComp}) => {
     
+    //watching the input text for name company
       const [watchNameComp,setWatchNameComp]=useState('')
 
       const searchBut=()=>{

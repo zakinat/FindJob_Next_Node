@@ -1,9 +1,9 @@
-import React,{useState} from 'react'
+import React from 'react'
 import {JobCard} from '../components'
 
 
 
-const JobsList = ({jobs,carousel}) => {
+const JobsList = ({jobs}) => {
 
 
     return (
