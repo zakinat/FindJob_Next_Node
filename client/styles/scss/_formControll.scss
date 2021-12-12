@@ -42,3 +42,17 @@
        }
    }
 }
+
+@media (max-width: 670px) {
+    .formControl{
+        flex-direction: column;
+
+        &__filter{
+            flex-direction: column;
+            &-jobDate{
+                margin-bottom: 1rem;
+            }
+            margin-bottom: 1rem;
+        }
+    }
+  }
